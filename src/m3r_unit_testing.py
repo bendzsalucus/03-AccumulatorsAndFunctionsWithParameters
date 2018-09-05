@@ -8,7 +8,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 """
 ###############################################################################
 #
-# TODO: 1.
+# Done: 1.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -58,7 +58,7 @@ def distance(point):
     """
     # This code has an error, on purpose.  Do NOT fix it.
     x_squared = point.x * point.x
-    y_squared = point.y * point.x
+    y_squared = point.y * point.y
 
     return math.sqrt(x_squared + y_squared)
 
@@ -69,10 +69,10 @@ def distance(point):
 main()
 
 ###############################################################################
-# TODO: 2.
+# Done: 2.
 #
 # READ the following, asking questions as needed.
-# When you believe that you understading what is says about UNIT TESTING,
+# When you believe that you understanding what is says about UNIT TESTING,
 # mark the above TO-DO as DONE.
 #
 #   In most exercises we will follow the  UNIT TESTING
