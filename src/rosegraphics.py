@@ -1,5 +1,5 @@
 """
-rosegraphics.py - a simple Graphics library for Python.
+rosegraphics.py F a simple Graphics library for Python.
 Its key feature is:
   -- USING this library provides a simple introduction to USING objects.
 
