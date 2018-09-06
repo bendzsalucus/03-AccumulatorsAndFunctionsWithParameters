@@ -31,11 +31,21 @@ def run_test_sum_cosines():
 
     # Test 1:
     expected = -.51948
-    answer = sum_cosines(5)
+    answer = sum_cosines(4)
     print('Test 1 expected:', expected)
     print('actual:  ', answer)
 
+    # Test 2:
+    expected = -.13416
+    answer = sum_cosines(3)
+    print('Test 1 expected:', expected)
+    print('actual:  ', answer)
 
+    # Test 3:
+    expected = 0
+    answer = sum_cosines(0)
+    print('Test 1 expected:', expected)
+    print('actual:  ', answer)
 
 def sum_cosines(n):
     """
@@ -56,6 +66,9 @@ def sum_cosines(n):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
+    for k in range(n):
+        n = cos(n+1)
+        return n
 
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
