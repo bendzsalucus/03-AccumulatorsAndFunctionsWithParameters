@@ -17,7 +17,7 @@ def main():
 def run_test_sum_cosines():
     """ Tests the   sum_cosines   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DOne: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -65,10 +65,11 @@ def sum_cosines(n):
     #   No fair running the code of  sum_cosines  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    import math
+    k = 0
     for k in range(n):
-        n = cos(n+1)
-        return n
+        n = math.cos(k-1)
+    return n
 
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
