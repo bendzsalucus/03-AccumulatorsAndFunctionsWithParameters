@@ -17,6 +17,12 @@ def main():
     # Test your functions by putting calls to them here:
     print_sequence1(21)
     draw_circles1(20)
+    print_sequence2(18)
+    draw_circles2(20)
+    print_sequence3(100)
+    draw_circles3(100)
+    print_cosines(100)
+    draw_cosines_and_sines(100)
 
 def print_sequence1(x):
     """
@@ -74,7 +80,7 @@ def draw_circles1(x):
     print('--------------------------------------------------')
 
 
-def print_sequence2():
+def print_sequence2(x):
     """
     Prints:
       50
@@ -86,7 +92,7 @@ def print_sequence2():
       390.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # Done: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -95,11 +101,13 @@ def print_sequence2():
     print('Running print_sequence2:')
     print('--------------------------------------------------')
 
-    
+    for k in range(x):
+        x = (x+20)
+        print(x +12)
 
 
 
-def draw_circles2():
+def draw_circles2(x):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -110,7 +118,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # Done: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -119,8 +127,20 @@ def draw_circles2():
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
 
+    window = rg.RoseWindow(400, 400)
 
-def print_sequence3():
+    for k in range(x):
+        p = 50 + (20*k)
+        center_point = rg.Point(p, 100)
+        radius = 10
+        circle = rg.Circle(center_point, radius)
+        circle.fill_color = 'blue'
+        circle.attach_to(window)
+    window.render()
+
+    window.close_on_mouse_click()
+
+def print_sequence3(x):
     """
     Prints:
       1
@@ -131,7 +151,7 @@ def print_sequence3():
       100.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # Done: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -139,9 +159,11 @@ def print_sequence3():
     print('--------------------------------------------------')
     print('Running print_sequence3:')
     print('--------------------------------------------------')
+    for k in range(x):
+        print(k + 1)
 
 
-def draw_circles3():
+def draw_circles3(x):
     """
     -- Constructs an rg.RoseWindow whose width and height are both 300.
     -- Constructs and draws 100 rg.Circle objects such that:
@@ -150,7 +172,7 @@ def draw_circles3():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function, per its doc-string above.
+    # Done: 7. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -159,8 +181,18 @@ def draw_circles3():
     print('Running draw_circles3:  See graphics window')
     print('--------------------------------------------------')
 
+    window = rg.RoseWindow(300, 300)
 
-def print_cosines():
+    for k in range(x):
+        center_point = rg.Point(200, 150)
+        radius = (k+1)
+        circle = rg.Circle(center_point, radius)
+        circle.attach_to(window)
+    window.render()
+
+    window.close_on_mouse_click()
+
+def print_cosines(x):
     """
     For each of the integers 0  1  2  ... 100,
     prints 80 times the cosine of that integer.
@@ -179,7 +211,7 @@ def print_cosines():
        68.9855097830147
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # Done: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -194,9 +226,14 @@ def print_cosines():
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
+    import math
+    for k in range(x):
+        a= math.cos(k+1)
+        b=(a*80)
+        print(b)
 
 
-def draw_cosines_and_sines():
+def draw_cosines_and_sines(x):
     """
     -- Constructs a window whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -221,6 +258,20 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
 
 
+    window = rg.RoseWindow(400, 400)
+    import math
+    for k in range(x):
+        p = 200 + (80 * math.cos(k+1))
+        l = 200 + (80 * math.sin(k+1))
+        center_point = rg.Point(p, l)
+        radius = 10
+        circle = rg.Circle(center_point, radius)
+        circle.fill_color = 'blue'
+        circle.attach_to(window)
+
+    window.render()
+
+    window.close_on_mouse_click()
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
 # imported by another module), then call the 'main' function.
