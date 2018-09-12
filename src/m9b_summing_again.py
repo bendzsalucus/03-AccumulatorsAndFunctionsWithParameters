@@ -10,14 +10,19 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_sum_powers()
     run_test_sum_powers_in_range()
+    c = sum_powers(5, -.03)
+    b = sum_powers(100, .1)
+    a = sum_powers(5, 0)
+    d = sum_powers(12, 4)
+    e = sum_powers(5, -2)
+    run_test_sum_powers(a, b, c, d, e)
 
 
-def run_test_sum_powers():
+def run_test_sum_powers(a, b, c, d, e):
     """ Tests the   sum_powers   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DOne: 2. Implement this function.
     #   It TESTS the  sum_powers  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -28,6 +33,37 @@ def run_test_sum_powers():
     print('--------------------------------------------------')
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
+
+
+    print('test1')
+    print('expected')
+    print(3.80826)
+    print('actual')
+    print(c)
+
+    print('test2')
+    print('expected')
+    print(144.45655)
+    print('actual')
+    print(b)
+
+    print('test3')
+    print('expected')
+    print(5)
+    print('actual')
+    print(a)
+
+    print('test4')
+    print('expected')
+    print(60710)
+    print('actual')
+    print(d)
+
+    print('test5')
+    print('expected')
+    print(1.4636)
+    print('actual')
+    print(e)
 
 
 def sum_powers(n, p):
@@ -49,7 +85,10 @@ def sum_powers(n, p):
     #   No fair running the code of  sum_powers  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    z = 0
+    for k in range(n):
+        z = ((k+1)**p)+ z
+    return z
 
 def run_test_sum_powers_in_range():
     """ Tests the   sum_powers_in_range   function. """
