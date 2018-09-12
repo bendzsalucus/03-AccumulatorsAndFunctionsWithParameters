@@ -10,13 +10,17 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_sum_powers_in_range()
     c = sum_powers(5, -.3)
     b = sum_powers(100, .1)
     a = sum_powers(5, 0)
     d = sum_powers(12, 4)
     e = sum_powers(5, -2)
     run_test_sum_powers(a, b, c, d, e)
+
+    a = sum_powers_in_range(2, 3, 2)
+    b = sum_powers_in_range(2, 2, 2)
+    c = sum_powers_in_range(3, 100, .2)
+    run_test_sum_powers_in_range(a, b, c)
 
 
 def run_test_sum_powers(a, b, c, d, e):
@@ -79,7 +83,7 @@ def sum_powers(n, p):
       -- sum_powers(100, 0.1) returns about 144.45655
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers  to GENERATE
@@ -90,10 +94,10 @@ def sum_powers(n, p):
         z = ((k+1)**p)+ z
     return z
 
-def run_test_sum_powers_in_range():
+def run_test_sum_powers_in_range(a, b, c ):
     """ Tests the   sum_powers_in_range   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # Done: 4. Implement this function.
     #   It TESTS the  sum_powers_in_range  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -105,6 +109,23 @@ def run_test_sum_powers_in_range():
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
 
+    print('test1')
+    print('expected')
+    print(212.7474551)
+    print('actual')
+    print(c)
+
+    print('test2')
+    print('expected')
+    print(13)
+    print('actual')
+    print(b)
+
+    print('test3')
+    print('expected')
+    print(29)
+    print('actual')
+    print(a)
 
 def sum_powers_in_range(m, n, p):
     """
@@ -119,12 +140,16 @@ def sum_powers_in_range(m, n, p):
       -- sum_powers_in_range(3, 100, 0.1) returns about 142.384776
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DOne: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers_in_range  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
+    a = 0
+    for k in range(n):
+       a = ((m+k)**p)+a
+    return a
 
 
 # ----------------------------------------------------------------------
