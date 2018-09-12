@@ -179,7 +179,8 @@ def lines():
     midpoint1 = line.get_midpoint()
 
     print(midpoint1)
-
+    print(midpoint1.x)
+    print(midpoint1.y)
     a = 200
     b = 300
     c = 30
@@ -192,6 +193,8 @@ def lines():
     midpoint2 = line.get_midpoint()
 
     print(midpoint2)
+    print(midpoint2.x)
+    print(midpoint2.y)
 
     window.render()
     window.close_on_mouse_click()
