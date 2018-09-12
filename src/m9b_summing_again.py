@@ -11,7 +11,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_powers_in_range()
-    c = sum_powers(5, -.03)
+    c = sum_powers(5, -.3)
     b = sum_powers(100, .1)
     a = sum_powers(5, 0)
     d = sum_powers(12, 4)
